@@ -1,6 +1,7 @@
 <hello name="{{ name }}"></hello>
 <p>
   Start editing to see some magic happen :)
+  </p>
   <br/>
   {{"Contoh menulis di sini"}}
   <br/>
@@ -8,5 +9,8 @@
   <br/>
   <input [(ngModel)] = "a" type="text"/> * <input [(ngModel)] = "b" type="text"/> = {{a*b}} 
   <br/>
-  {{item.name}} - {{item.harga | currency :'Rp'}}
-</p>
+  <!-- {{item.name}} - {{item.harga | currency :'Rp'}} -->
+  <br/>
+  <div *ngFor="let fruit of item">
+    {{fruit.nama}} - {{fruit.harga | currency :'Rp'}}
+  </div>
